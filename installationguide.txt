@@ -1,0 +1,82 @@
+
+//make sure you have python installed and pip working
+python
+python --version
+python3
+pip
+pip3
+//getting the lastest version of pip
+pip3 install django
+
+//after pip installation
+django-admin
+
+//navigate to the folder directory of your choice
+django-admin startproject  password-generator
+django-admin startproject password-generator .
+
+
+//starting the shell
+
+//Creating APP
+~python manage.py startapp [APPname]
+
+//Url.py -From password_generator Project
+-Django looks for this page to render it to the clients browser
+
+//Templates  - To handle the html visual views
+-Create the template in your generator Apps
+
+/*
+<form action="{% url 'password' %}" method="">
+
+*/
+
+/*
+
+Installing Git (Github)
+~Git      //checking if git has been installed
+~ git init  //Startup/installing git into the Project  < cd into the Project to install git
+
+//Adding Username and Email 
+$ git config --global user.name "Vikywes"
+$ git config --global user.email vikywes5050@gmail.com
+
+~git status     //showing the states of git in the project
+~ git add -A , --all    //add all the files to the staged level
+~git commit -m "First Commit"
+~git stash   //it adds, staged and commit the  files
+~ git log       ///shoows all the commits that has been carried out 
+~git checkout [e3fae1ee351e29e1ed8e20fc71a8da7a8350b4f3] //return to the version of commit
+
+~git remote add origin https://github.com/Vikywes/django3-password-generator.git   //pushing from cmd to new created repository
+~git push -u origin main              //sends your project to online repository
+~git push origin master        //This one works fine
+
+
+*/
+MODELS TUTORIAL
+MODELS
+//https://docs.djangoproject.com/en/3.2/ref/models/fields/
+-For the imageField to function in the model, pillow needs to be installed
+~pip install pillow
+
+-Applying Migration to your projects to effect the changes
+~ python manage.py migrate     //after migration , running starting server will not show those warning again
+
+-Checking if there are outstanding migration to apply
+~python manage.py makemigrations
+//it indicates any new poject yet to be migrated now you  migrate it with python manage.py migrate
+
+ADMIN page
+//Check the page in url.py
+-Creating users for the Admin Page login
+-http://127.0.0.1:8000/admin/login/?next=/admin/  : wesley@Password@123
+~Python manage.py createsuperuser
+
+UPDating the Admin.py in Portfolio Project
+>This Imports the created Models into our Project
+>the update is in admin.py files
+
+-Media URL, Media Root  > make this settings  in settings.py to direct the media item
+
